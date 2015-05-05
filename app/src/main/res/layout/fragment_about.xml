@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="123.0dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/festical" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView"
+            android:text="About"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/primary"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/imageView"
+            android:autoLink="all"
+            android:autoText="true"
+            android:text="    FestiCal was created in my spare time because I am a filmmaker, as well as a programmer, and have had too many scares with festival dates. I designed FestiCal with the features I wanted from a program like this and is a continual work in progress. \n\n    If you have any suggestions, thoughts or problems, please contact me at festical@cinemattson.com \n\n    If you'd like to support my work, you can send me some Bitcoin below."
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/primaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:id="@+id/imgBTC"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/btc" />
+
+        <TextView
+            android:id="@+id/txtCopy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="FestiCal © 2015, Cinemattson Productions"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#ff969696"
+            android:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

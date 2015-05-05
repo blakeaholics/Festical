@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/festical" />
+
+            <TextView
+                android:id="@+id/txtFName"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Festival Name"
+                android:ellipsize="marquee"
+                android:layout_above="@+id/txtWebsite"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:shadowColor="@color/primaryDark"
+                android:paddingLeft="5dp"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:textColor="@android:color/white"
+                android:background="#9f1d5c74"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="03/04/2015"
+                android:id="@+id/txtSDate"
+                android:textStyle="bold"
+                android:layout_alignBottom="@+id/txtWebsite"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="false"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/primary"
+                android:paddingRight="5dp"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:background="#9f000000"
+                android:gravity="right"
+                android:layout_alignParentStart="false"
+                android:paddingLeft="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="http://website.com"
+                android:id="@+id/txtWebsite"
+                android:autoLink="web"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignLeft="@+id/txtFName"
+                android:layout_alignStart="@+id/txtFName"
+                android:textColorLink="#FFFFFF"
+                android:paddingLeft="5dp"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:background="#9f000000"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/txtSDate"
+                android:layout_toStartOf="@+id/txtSDate"
+                android:paddingTop="2dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/txtBio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/sixteen"
+                android:paddingLeft="@dimen/sixteen"
+                android:paddingRight="@dimen/sixteen"
+                android:paddingTop="@dimen/sixteen"
+                android:textColor="@android:color/black"
+                android:text="Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris, morbi porttitor interdum feugiat nulla donec sodales, vestibulum nisl primis a molestie vestibulum quam, sapien mauris metus risus suspendisse magnis. Augue viverra nulla faucibus egestas eu, a etiam id congue rutrum ante, arcu tincidunt donec quam felis at ornare, iaculis ligula sodales venenatis commodo volutpat neque, suspendisse elit praesent tellus felis mi amet. Inceptos amet tempor lectus lorem est non, ac donec ac libero neque mauris, tellus ante metus eget leo consequat. Scelerisque dolor curabitur pretium blandit ut feugiat, amet lacus pulvinar justo convallis ut, sed natoque ipsum urna posuere nibh eu. Sed at sed vulputate sit orci, facilisis a aliquam tellus quam aliquam, eu aliquam donec at molestie ante, pellentesque mauris lorem ultrices"
+                android:layout_alignLeft="@+id/txtWebsite"
+                android:layout_alignStart="@+id/txtWebsite"
+                android:layout_below="@+id/txtLocation" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Location, World"
+                android:id="@+id/txtLocation"
+                android:background="@color/primary"
+                android:textColor="@android:color/white"
+                android:padding="5dp"
+                android:layout_below="@+id/image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Rating"
+                android:id="@+id/txtRating"
+                android:background="@color/primary"
+                android:textColor="@android:color/white"
+                android:padding="5dp"
+                android:layout_below="@+id/image"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="false"
+                android:gravity="right"
+                android:layout_alignParentStart="false"
+                android:layout_alignEnd="@id/txtLocation"
+                android:layout_toEndOf="@id/txtLocation" />
+        </RelativeLayout>
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_header_background"
+        android:minHeight="?attr/actionBarSize" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:minHeight="?attr/actionBarSize"
+        android:textColor="@android:color/white"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:theme="@style/ToolbarColoredBackArrow" />
+</FrameLayout>

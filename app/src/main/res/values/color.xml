@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color Palette -->
+
+    <!-- Theme colors -->
+    <color name="primary">#ff1d5c74</color>
+    <color name="primaryDark">#ff133b4e</color>
+    <color name="accentLight">#ffa6a6a6</color>
+    <color name="accent">#9f1d5c74</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="ripple">#ffa2b9c4</color>
+    <color name="accent_pressed">#ff81929b</color>
+
+</resources>
+
+

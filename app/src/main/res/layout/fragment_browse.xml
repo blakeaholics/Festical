@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_recyler_view_content_browse"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:scrollbars="vertical"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:layout_gravity="center_horizontal|top"
+        android:paddingTop="10dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLocation"
+            android:hint="Enter a location"
+            android:textColor="@color/primary"
+            android:layout_above="@+id/spnGenres"
+            android:layout_alignLeft="@+id/spnGenres"
+            android:layout_alignStart="@+id/spnGenres"
+            android:layout_alignRight="@+id/spnGenres"
+            android:layout_alignEnd="@+id/spnGenres"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTags"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:layout_toStartOf="@+id/btnSearch"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:hint="Tags seperated by comma"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/primary"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:background="@color/accent"
+            android:id="@+id/btnSearch"
+            android:layout_alignTop="@+id/txtTags"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/white" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnGenres"
+            android:layout_above="@+id/txtTags"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:entries="@array/genre_title"
+            android:textColor="@color/primary"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_browse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:theme="@style/ToolbarColoredBackArrow" />
+
+</FrameLayout>
