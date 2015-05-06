@@ -38,7 +38,7 @@
             android:autoText="true"
             android:text="    FestiCal was created in my spare time because I am a filmmaker, as well as a programmer, and have had too many scares with festival dates. I designed FestiCal with the features I wanted from a program like this and is a continual work in progress. \n\n    If you have any suggestions, thoughts or problems, please contact me at festical@cinemattson.com \n\n    If you'd like to support my work, you can send me some Bitcoin below."
             android:textAppearance="?android:textAppearanceSmall"
-            android:textColor="@color/primaryDark"
+            android:textColor="@android:color/black"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
 

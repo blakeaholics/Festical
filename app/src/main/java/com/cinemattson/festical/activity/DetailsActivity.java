@@ -1,5 +1,6 @@
 package com.cinemattson.festical.activity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,6 +9,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,6 +47,7 @@ public class DetailsActivity extends ActionBarActivity implements ObservableScro
         Intent intent = getIntent();
         position = intent.getIntExtra("FEST_NUMBER", 0);
         application = (MaterialDesignApplication) getApplication();
+
         festival = application.getListFestivals().get(position);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //toolbar.setTitle(festival.getName());
@@ -80,6 +85,28 @@ public class DetailsActivity extends ActionBarActivity implements ObservableScro
         mScrollView.setScrollViewCallbacks(this);
 
         mParallaxImageHeight = getResources().getDimensionPixelSize(R.dimen.drawer_menu_width);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_save:
+                //newGame();
+                return true;
+            case R.id.action_share:
+                //showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

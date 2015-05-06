@@ -1,6 +1,7 @@
 package com.cinemattson.festical.adapter;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,14 @@ import com.cinemattson.festical.R;
  * Created by Blake on 04/05/2015.
  */
 public class ImageItemAdapter extends BaseAdapter {
+    private final TypedArray iconValues;
     private Context context;
-    private final String[] mobileValues;
+    private final String[] genreValues;
 
-    public ImageItemAdapter(Context context, String[] mobileValues) {
+    public ImageItemAdapter(Context context, String[] genreValues) {
         this.context = context;
-        this.mobileValues = mobileValues;
+        this.genreValues = genreValues;
+        this.iconValues = context.getApplicationContext().getResources().obtainTypedArray(R.array.genre_icon);
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -39,15 +42,16 @@ public class ImageItemAdapter extends BaseAdapter {
             // set value into textview
             TextView textView = (TextView) gridView
                     .findViewById(R.id.grid_item_label);
-            textView.setText(mobileValues[position]);
+            textView.setText(genreValues[position]);
 
             // set image based on selected text
             ImageView imageView = (ImageView) gridView
                     .findViewById(R.id.grid_item_image);
 
-            String mobile = mobileValues[position];
+            String mobile = genreValues[position];
+            imageView.setImageResource(iconValues.getResourceId(position, -1));
 
-            if (mobile.equals("comedy")) {
+/*            if (mobile.equals("comedy")) {
                 imageView.setImageResource(R.drawable.ic_about);
             } else if (mobile.equals("horror")) {
                 imageView.setImageResource(R.drawable.ic_account);
@@ -55,7 +59,7 @@ public class ImageItemAdapter extends BaseAdapter {
                 imageView.setImageResource(R.drawable.ic_user);
             } else {
                 imageView.setImageResource(R.mipmap.ic_launcher);
-            }
+            }*/
 
         } else {
             gridView = (View) convertView;
@@ -66,7 +70,7 @@ public class ImageItemAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mobileValues.length;
+        return genreValues.length;
     }
 
     @Override

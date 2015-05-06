@@ -44,7 +44,7 @@ public class RecyclerViewCardsAdapter extends RecyclerView.Adapter<RecyclerViewC
         txtFestName.setText(mListItemsCard.get(position)
                 .getName());
 
-        TextView txtRating = (TextView) holder.itemView.findViewById(R.id.txtRating);
+        TextView txtRating = (TextView) holder.itemView.findViewById(R.id.txtStars);
         txtRating.setText("\u2605" + mListItemsCard.get(position).getRating());
 
         TextView txtSDate = (TextView) holder.itemView.findViewById(R.id.txtSubDate);

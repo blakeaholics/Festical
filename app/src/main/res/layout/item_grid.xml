@@ -2,14 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="5dp" >
 
     <ImageView
         android:id="@+id/grid_item_image"
-        android:layout_width="50px"
-        android:layout_height="50px"
-        android:layout_marginRight="10px"
-        android:src="@mipmap/ic_launcher" >
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="0dip"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="top|center">
     </ImageView>
 
     <TextView
@@ -19,7 +22,13 @@
         android:text="Category"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/black"
-        android:layout_marginTop="5px">
+        android:padding="0dip"
+        android:layout_below="@+id/grid_item_image"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
     </TextView>
 
 </LinearLayout>

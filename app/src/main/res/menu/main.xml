@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="1"
+        android:title="@string/action_save"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_save" />
+
+    <item android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_share"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+</menu>

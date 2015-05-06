@@ -37,6 +37,7 @@
     <string name="genre_doc">Documentary</string>
     <string name="genre_drama">Drama</string>
     <string name="genre_horror">Horror</string>
+    <string name="genre_shorts">Shorts</string>
 
     <string-array name="genre_title">
         <item>@string/genre_all</item>
@@ -45,12 +46,26 @@
         <item>@string/genre_doc</item>
         <item>@string/genre_drama</item>
         <item>@string/genre_horror</item>
+        <item>@string/genre_shorts</item>
+    </string-array>
+
+
+    <string-array name="genre_icon">
+        <item>@mipmap/ic_launcher</item>
+        <item>@drawable/genre_action</item>
+        <item>@drawable/genre_comedy</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@drawable/genre_horror</item>
+        <item>@drawable/genre_shorts</item>
     </string-array>
 
     <!-- Sectios Tabs -->
     <string name="fragment_home_fragment1_title">Home</string>
     <string name="fragment_home_fragment2_title">Following</string>
     <string name="fragment_home_fragment3_title">Explore</string>
+    <string name="action_save">Save</string>
+    <string name="action_share">Share</string>
 
 
     <string-array name="fragment_home_sections_tabs_title">
@@ -58,5 +73,6 @@
         <item>@string/fragment_home_fragment2_title</item>
         <item>@string/fragment_home_fragment3_title</item>
     </string-array>
+
 
 </resources>
